@@ -8,11 +8,20 @@
     <script src="lib/browser.min.js"></script>
 
   </head>
+  <style>
+    .backgroundYellow{background-color: yellow}
+  </style>
   <body>
 
     <div id = "root"></div>
     <script type="text/babel">
-      ReactDOM.render(<h1>Wellcome to reactJS </h1>, document.getElementById("root"));
+      ReactDOM.render(
+        //React.createElement("h1", {}, "JSX Concept, and babel-core library"),
+        <div>
+          <h1>Demo JSX concept </h1>
+          <h1 className="backgroundYellow">JSX Concept, and babel-core library</h1>
+        </div>
+        ,document.getElementById("root"));
     </script>
   </body>
 </html>
