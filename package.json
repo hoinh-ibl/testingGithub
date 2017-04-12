@@ -1,0 +1,25 @@
+{
+  "name": "demo-level-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js",
+    "test": "node test.js"
+  },
+  "browser":{
+  	"leveldown": "level-js"
+  },
+  "author": "hoinh",
+  "license": "ISC",
+  "devDependencies": {
+    "budo": "^9.4.7"
+  },
+  "dependencies": {
+    "level": "^1.6.0",
+    "levelup": "^1.3.5",
+    "leveldown": "^1.3.5",
+    "level-js": "^2.2.4",
+    "level-sublevel": "^6.6.1"
+  }
+}

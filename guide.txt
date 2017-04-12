@@ -1,0 +1,16 @@
+Basic usage
+-----------
+
+First you need to install LevelUP!
+
+$ npm install levelup leveldown
+
+$ npm install level
+
+$ npm i level-sublevel 
+
+$ npm i level-js --save
+
+*(this second option requires you to use LevelUP by calling `var levelup = require('level')`)*
+
+
