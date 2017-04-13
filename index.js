@@ -1,21 +1,21 @@
 
 //testing 1
-// var level = require("level");
-// var database = level("./db_test");
+var level = require("level");
+var database = level("./db_test");
 
-// database.put("amimal", "tiger", function(err){
-//   //This point animal = tiger
-// });
+database.put("amimal", "tiger", function(err){
+  //This point animal = tiger
+});
 
-//   database.get('amimal', function(err, animal){
-//     console.log(animal);
-//   });
+database.get('amimal', function(err, animal){
+    console.log(animal);
+});
 
-// database.del('amimal', function(err){
-//   database.get('amimal', function(err, animal){
-//     console.log(animal);
-//   });
-// });
+database.del('amimal', function(err){
+  database.get('amimal', function(err, animal){
+    console.log(animal);
+  });
+});
 
 // //testing 2
 // var level = require("level");
@@ -92,22 +92,21 @@
 // })
 
 //testing 6
-var levelup = require("levelup");
-var sublevel = require('level-sublevel');
-
-var database = sublevel(levelup("./db_test", {
-  database: require("level-js"),
-  valueEncoding: 'json'
-})) ;
-
-var bearsdb = database.sublevel('bears');
-var regionsdb = database.sublevel('regions');
-
-regionsdb.put('northamerican', {name: 'North American'}, function(err){
-  bearsdb.put('steven', {type: 'grizzly', region: 'northamerican'}, function(err){
-  });
-  // console.log('testing go here');
-});
+// var levelup = require("levelup");
+// var sublevel = require('level-sublevel');
+//
+// var database = sublevel(levelup("./db_test", {
+//   database: require("level-js"),
+//   valueEncoding: 'json'
+// })) ;
+//
+// var bearsdb = database.sublevel('bears');
+// var regionsdb = database.sublevel('regions');
+//
+// regionsdb.put('northamerican', {name: 'North American'}, function(err){
+//   bearsdb.put('steven', {type: 'grizzly', region: 'northamerican'}, function(err){
+//   });
+// });
 
 // var bears = [];
 // var stream = bearsdb.createReadStream();
